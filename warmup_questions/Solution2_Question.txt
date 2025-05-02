@@ -1,38 +1,25 @@
-Happy Number (medium)
+Pangram (easy)
 Problem Statement
 
-Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the square of all of its digits, leads us to the number 1. All other (not-happy) numbers will never reach 1. Instead, they will be stuck in a cycle of numbers that does not include 1.
+A pangram is a sentence where every letter of the English alphabet appears at least once.
 
-Given a positive number n, return true if it is a happy number otherwise return false.
+Given a string sentence containing English letters (lower or upper-case), return true if sentence is a pangram, or false otherwise.
+
+Note: The given sentence might contain other characters like digits or spaces, your solution should handle these too.
 
 Example 1:
 
-    Input: 23
-    Output: true (23 is a happy number)
-    Explanations: Here are the steps to find out that 23 is a happy number:
-
-2^2 + 3^2 = 4 + 9 = 13
-1^2 + 3^2 = 1 + 9 = 10
-1^2 + 0^2 = 1 + 0 = 1
+Input: sentence = "TheQuickBrownFoxJumpsOverTheLazyDog"
+Output: true
+Explanation: The sentence contains at least one occurrence of every letter of the English alphabet either in lower or upper case.
 
 Example 2:
 
-    Input: 12
-    Output: false (12 is not a happy number)
-    Explanations: Here are the steps to find out that 12 is not a happy number:
+Input: sentence = "This is not a pangram"
+Output: false
+Explanation: The sentence doesn't contain at least one occurrence of every letter of the English alphabet.
 
-1^2 + 2^2 = 1 + 4 = 5
-5^2 = 25
-2^2 + 5^2 = 4 + 25 = 29
-2^2 + 9^2 = 4 + 81 = 85
-8^2 + 5^2 = 64 + 25 = 89
-8^2 + 9^2 = 64 + 81 = 145
-1^2 + 4^2 + 5^2 = 1 + 16 + 25 = 42
-4^2 + 2^2 = 16 + 4 = 20
-2^2 + 0^2 = 4 + 0 = 4
-4^2 = 16
-1^2 + 6^2 = 1 + 36 = 37
-3^2 + 7^2 = 9 + 49 = 58
-5^2 + 8^2 = 25 + 64 = 89
+Constraints:
 
-Please note the cycle from 89 -> 89.
+    1 <= sentence.length <= 1000
+    sentence consists of lower or upper-case English letters.
